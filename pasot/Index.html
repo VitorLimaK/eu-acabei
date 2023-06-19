@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>foi tudo eu professor</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #616161;
+    margin: 0;
+  }
+
+  #container {
+    text-align: center;
+    background-color: #ff0000;
+    padding: 50px;
+    border-radius: 5px;
+    border: #616161;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h1, h3 {
+    color: #ffffff;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .itens {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <h1 id="titulo">Titulo</h1>
+  <h3 id="subtitulo">subtítulo</h3>
+  <br/>
+  <p id="descricao">Uma lista de itens</p>
+  <br/>
+  <ul>
+    <li>Seus itens
+      <ol>
+        <li class="itens">Livro</li>
+        <li class="itens">Caneta</li>
+        <li class="itens">Telefone</li>
+        <li class="itens">Carteira</li>
+      </ol>
+    </li>
+
+      </ol>
+    </li>
+  </ul>
+</div>
+
+<script>
+function titulo() {
+  var titulo = window.document.getElementById('titulo');
+  var resp_ti = prompt('Insira um título para sua pagina ! Pense bem sobre isso.:');
+  titulo.innerText = resp_ti;
+}
+
+function subtitulo() {
+  var subtitulo = window.document.getElementById('subtitulo');
+  var resp_su = prompt('Explique ou fale um pouco sobre sua página:');
+  subtitulo.innerText = resp_su;
+}
+
+function mudarItens() {
+  var itens = window.document.getElementsByClassName('itens');
+  for (var i = 0; i < itens.length; i++) {
+    var resp_itens = prompt('Escreva sobre os topicos que você pretende falar sobre nesse site:' + (i + 1) + ':');
+    itens[i].innerText = resp_itens;
+  }
+}
+
+titulo();
+subtitulo();
+mudarItens();
+</script>
+
+</body>
+</html>
